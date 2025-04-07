@@ -1,0 +1,18 @@
+replicaCount: 1
+
+image:
+  repository: YOUR_DOCKER_REPO/my-sample-app
+  tag: "latest"
+  pullPolicy: IFNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+
+resources:
+  limits:
+     cpu: 100m
+     memory: 128Mi
+  requests:
+     cpu: 100m
+     memory: 128Mi
