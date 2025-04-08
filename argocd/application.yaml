@@ -1,21 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Apllication
 metadata:
-  name: my-sample-app
+  name: sample-node-app
   namespace: argocd
 spec:
   destination: 
     name: ''
-    namespace: my-sample-app
+    namespace: default
     server: 'https://kubernetes.default.svc'
   project: default
   
   source:
-    repoURL: 'https://github.com/your-org/my-sample-app.git'
+    repoURL: 'https://github.com/skswami91/k8s-manifests-2025.git'
     targetRevision: 'main' 
-    path: 'charts/my-sample-app' 
-    helm:
-      releaseName: my-sample-app
+    path: 'sample-node-app' 
+  project: default  
   
   syncPolicy:
     automated:
