@@ -1,2 +1,2 @@
-@Library('shared-pipeline-library')_
+@Library('pipeline-shared-library')_
 buildpipeline('main')
